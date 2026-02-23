@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>選擇 Sheet</title>
+</head>
+<body>
+
+<h2>請選擇要處理的 Sheet</h2>
+
+<form method="post">
+    {% csrf_token %}
+
+    {% for sheet in sheet_names %}
+        <label>
+            <input type="checkbox" name="sheets" value="{{ sheet }}">
+            {{ sheet }}
+        </label>
+        <br>
+    {% endfor %}
+
+    <br>
+    <button type="submit">開始處理並下載</button>
+</form>
+
+</body>
+</html>

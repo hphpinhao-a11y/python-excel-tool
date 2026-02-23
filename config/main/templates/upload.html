@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>上傳 Excel</title>
+</head>
+<body>
+
+<h2>上傳監測 Excel 檔案</h2>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="excel_file" required>
+    <button type="submit">上傳</button>
+</form>
+
+</body>
+</html>
+
